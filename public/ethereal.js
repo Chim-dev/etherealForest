@@ -10,65 +10,26 @@ const rose = document.getElementById("rose");
 const roseBtn = document.getElementById("rosebtn");
 const pas = document.getElementById("pas");
 const pasBtn = document.getElementById("pasbtn");
+const btns = [
+  { audio: pas, button: pasBtn },
+  { audio: audio, button: playPauseBtn },
+  { audio: mameko, button: play },
+  { audio: majogari, button: majogariBtn },
+  { audio: fila, button: filaBtn },
+  { audio: rose, button: roseBtn },
+];
+
+function toggleAudio(audio, button) {
+  if (audio.paused) {
+    audio.play();
+    button.textContent = "⏸ Pause";
+  } else {
+    audio.pause();
+    button.textContent = "▶ Play";
+  }
+}
 
 
-
-pasBtn.addEventListener("click", () => {
-    if (pas.paused) {
-        pas.play();
-        pasBtn.textContent = "⏸ Pause";
-    } else {
-        pas.pause();
-        pasBtn.textContent = "▶ Play";
-    }
-});
-
-playPauseBtn.addEventListener("click", () => {
-    if (audio.paused) {
-        audio.play();
-        playPauseBtn.textContent = "⏸ Pause";
-    } else {
-        audio.pause();
-        playPauseBtn.textContent = "▶ Play";
-    }
-});
-
-play.addEventListener("click", () => {
-    if (mameko.paused) {
-        mameko.play();
-        play.textContent = "⏸ Pause"
-    } else {
-        mameko.pause();
-        play.textContent = "▶ Play"
-    }
-});
-
-majogariBtn.addEventListener("click", () => {
-    if (majogari.paused) {
-        majogari.play();
-        majogariBtn.textContent = "⏸ Pause"
-    } else {
-        majogari.pause();
-        majogariBtn.textContent = "▶ Play"
-    }
-});
-
-filaBtn.addEventListener("click", () => {
-    if (fila.paused) {
-        fila.play();
-        filaBtn.textContent = "⏸ Pause"
-    } else {
-        fila.pause();
-        filaBtn.textContent = "▶ Play"
-    }
-});
-
-roseBtn.addEventListener("click", () => {
-    if (rose.paused) {
-        rose.play();
-        roseBtn.textContent = "⏸ Pause"
-    } else {
-        rose.pause();
-        roseBtn.textContent = "▶ Play"
-    }
+btns.forEach(({ audio, button }) => {
+  button.addEventListener("click", () => toggleAudio(audio, button));
 });
