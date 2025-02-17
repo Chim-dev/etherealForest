@@ -10,6 +10,20 @@ const rose = document.getElementById("rose");
 const roseBtn = document.getElementById("rosebtn");
 const pas = document.getElementById("pas");
 const pasBtn = document.getElementById("pasbtn");
+const jardin = document.getElementById("jardin");
+const jardinBtn = document.getElementById("jardinbtn");
+const inori = document.getElementById("inori");
+const inoriBtn = document.getElementById("inoribtn");
+const hex = document.getElementById("hex");
+const hexBtn = document.getElementById("hexbtn");
+const ellin = document.getElementById("ellin");
+const ellinBtn = document.getElementById("ellinbtn");
+const fukurou = document.getElementById("fukurou");
+const fukurouBtn = document.getElementById("fukuroubtn");
+const caffe = document.getElementById("caffe");
+const caffeBtn = document.getElementById("caffebtn");
+const redmoon = document.getElementById("redmoon");
+const redmoonBtn = document.getElementById("redmoonbtn");
 const btns = [
   { audio: pas, button: pasBtn },
   { audio: audio, button: playPauseBtn },
@@ -17,6 +31,13 @@ const btns = [
   { audio: majogari, button: majogariBtn },
   { audio: fila, button: filaBtn },
   { audio: rose, button: roseBtn },
+  { audio: jardin, button: jardinBtn},
+  { audio: inori, button: inoriBtn},
+  { audio: hex, button: hexBtn},
+  { audio: ellin, button: ellinBtn},
+  { audio: fukurou, button: fukurouBtn},
+  { audio: caffe, button: caffeBtn},
+  { audio: redmoon, button: redmoonBtn},
 ];
 
 function toggleAudio(audio, button) {
