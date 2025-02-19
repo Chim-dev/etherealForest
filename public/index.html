@@ -3,17 +3,17 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>ETHEREAL FOREST</title>
-    <link rel="stylesheet" href="styles.css" />
+    <link rel="stylesheet" href="styles.css"/>
     <link href="https://fonts.cdnfonts.com/css/ethereal" rel="stylesheet" />
   </head>
   <body class="bg-[#ebd2ec]">
     <div>
       <div>
         <div
-          class="mb-0 bg-cover h-full w-full bg-no-repeat"
+          class="mb-0 bg-cover h-full w-full bg-no-repeat relative"
           style="background-image: url(assets/ethereal\ wallpaper.jpg)"
         >
-          <nav class="backdrop-blur-md bg-white/20 rounded-md p-5 z-1000">
+          <nav class="backdrop-blur-md bg-white/20 rounded-md p-5 fixed w-full z-1000" id="test">
             <div class="flex justify-between px-10 items-center">
               <a href="" class="flex-shrink-0">
                 <h1
@@ -68,7 +68,7 @@
               </div>
             </div>
           </nav>
-          <div class="flex flex-col items-center justify-center h-screen">
+          <div class="flex flex-col items-center justify-center h-full">
             <div class="bg-white/10 p-8 rounded-2xl backdrop-blur-sm w-80">
               <h1 class="text-4xl text-center font-serif">
                 welcome dear Traveler !
@@ -160,7 +160,7 @@
 
           <div
             class="bg-no-repeat w-auto h-auto bg-cover"
-            style="background: url(assets/ethereal\ section3.png)"
+            style="background: url(assets/ethereal\ section\ 2.png)"
             id="music"
           >
             <div
@@ -179,7 +179,7 @@
                 >Explore More ?</a
               >
             </div>
-            <div class="mt-1 grid md:grid-cols-4 gap-5 pb-5">
+            <div class="mt-1 grid grid-cols-2 md:grid-cols-4 gap-5 pb-5">
               <!-- Cards Go Here -->
               <div
                 class="bg-white/25 backdrop-blur-md rounded-2xl overflow-hidden shadow-xl p-4 relative flex flex-col justify-between items-center"
@@ -201,7 +201,7 @@
                       >[まめこ/mameko] re-rose (Japanese & English & 中文
                       Subtitles)</span
                     >
-                    <span class="block text-violet-700 font-semibold"
+                    <span class="span"
                       >Artist [まめこ/mameko]</span
                     >
                   </div>
@@ -681,6 +681,50 @@
               </div>
             </div>
           </div>
+          <section style="background: url(assets/forest\ path\ 1.jpg)" class="w-full bg-no-repeat bg-cover h-full">
+            <div class="bg-white/5 backdrop-blur-sm p-0.5 rounded-3xl flex items-center justify-center">
+              <h1 class="text-4xl flex justify-center font-bold text-[#f3eaee] p-5 cursor-default drop-shadow-2xl">Contacts</h1>
+            </div>
+            <div
+                class="flex flex-col md:flex-row items-center gap-8 px-12 py-12"
+              >
+                <div class="backdrop-blur-lg p-5 rounded-xl bg-neutral-500/10">
+                  <h1 class="text-3xl text-[#f3eaee] font-extrabold uppercase">
+                    Ethereal Forest
+                  </h1>
+                  <p class="text-[#f3eaee] mt-4 font-semibold">
+                    As you step onto the moss-covered path, a soft mist swirls
+                    around your feet, carrying whispers of the wind through
+                    towering ancient trees. Sunlight filters through the dense
+                    canopy, painting golden patterns on the ground as if the
+                    forest itself is welcoming you. Each step deeper into the
+                    woods reveals hidden wonders—crystal-clear streams singing
+                    their melodies, fireflies dancing like stars between the
+                    leaves, and the distant echo of an unknown yet familiar
+                    tune. The air is fresh, laced with the scent of pine and
+                    blooming wildflowers, and for the first time in a long
+                    while, you feel a profound sense of serenity. But Ethereal
+                    Forest is more than just a place—it’s a journey. A path that
+                    shifts with your thoughts, revealing the unknown yet guiding
+                    you where you need to be. Will you follow the whispers of
+                    the trees? Will you uncover the secrets that lie beneath the
+                    ancient roots? The journey is yours to take. Step forward,
+                    and let the forest lead the way.
+                  </p>
+                  <div class="flex items-center justify-start">
+                    <audio
+                      src="assets/abcd.mp3"
+                      id="audio"
+                    ></audio>
+                    <button
+                      id="Soothing"
+                      class="mt-4 px-6 py-2 bg-[#826d87] hover:bg-[#544265] duration-200 rounded-lg text-white font-semibold"
+                    >
+                      ▶ Soothing Voice
+                    </button>
+                  </div>
+                </div>
+          </section>
         </main>
       </div>
     </div>

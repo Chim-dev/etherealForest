@@ -40,16 +40,31 @@ const btns = [
   { audio: redmoon, button: redmoonBtn},
 ];
 
+function pauseAllAudiosAndResetButtons(currentAudio) {
+  btns.forEach(({ audio, button }) => {
+    if (audio !== currentAudio && !audio.paused) {
+      audio.pause();
+      audio.currentTime = 0; // Optionally reset the audio to the start
+      button.textContent = "▶ Play"; // Reset other buttons to "▶ Play"
+    }
+  });
+} 
+
 function toggleAudio(audio, button) {
-  if (audio.paused) {
-    audio.play();
-    button.textContent = "⏸ Pause";
-  } else {
+  // If the clicked audio is already playing, pause it
+  if (!audio.paused) {
     audio.pause();
     button.textContent = "▶ Play";
+    return; // Exit the function early
   }
-}
 
+  // Pause all other audios and reset their buttons
+  pauseAllAudiosAndResetButtons(audio);
+
+  // Play the clicked audio and update its button text
+  audio.play();
+  button.textContent = "⏸ Pause";
+}
 
 btns.forEach(({ audio, button }) => {
   button.addEventListener("click", () => toggleAudio(audio, button));

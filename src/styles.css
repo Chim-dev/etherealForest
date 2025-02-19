@@ -17,3 +17,7 @@
         font-family: 'Ethereal', sans-serif;
      }
 }
+
+.span {
+    @apply block text-cyan-200 font-semibold
+}
