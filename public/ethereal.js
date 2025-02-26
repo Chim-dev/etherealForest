@@ -24,6 +24,8 @@ const caffe = document.getElementById("caffe");
 const caffeBtn = document.getElementById("caffebtn");
 const redmoon = document.getElementById("redmoon");
 const redmoonBtn = document.getElementById("redmoonbtn");
+const filou = document.getElementById("filou");
+const filouBtn = document.getElementById("filoubtn");
 const btns = [
   { audio: pas, button: pasBtn },
   { audio: audio, button: playPauseBtn },
@@ -38,6 +40,7 @@ const btns = [
   { audio: fukurou, button: fukurouBtn},
   { audio: caffe, button: caffeBtn},
   { audio: redmoon, button: redmoonBtn},
+  { audio: filou, button: filouBtn},
 ];
 
 function pauseAllAudiosAndResetButtons(currentAudio) {
