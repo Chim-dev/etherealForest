@@ -69,3 +69,4 @@ function toggleAudio(audio, button) {
 btns.forEach(({ audio, button }) => {
   button.addEventListener("click", () => toggleAudio(audio, button));
 });
+

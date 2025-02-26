@@ -21,3 +21,7 @@
 .span {
     @apply block text-cyan-200 font-semibold
 }
+
+.cards {
+    @apply bg-white/25 backdrop-blur-md rounded-2xl overflow-hidden shadow-xl p-4 relative hover:shadow-lg flex flex-col justify-between items-center
+}
